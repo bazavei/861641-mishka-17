@@ -2,30 +2,31 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Мишка</title>
   </head>
-  <body>
+  <body class="page">
     <header class="page-header">
-      <a class="page-hedear__logo">
-        <img class="page-heder__logo-image" src="http://placehold.it/150x100" alt="логотип магазина «Мишка»" width="110" height="45">
+      <a class="page-hedear__logo" href="index.html">
+        <img class="page-heder__logo-image" src="/img/logo-mobile.svg" alt="логотип магазина «Мишка»" width="86" height="35">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="#">Каталог товаров</a>
+              <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Вязание на заказ</a>
+              <a class="main-nav__link" href="#">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
-              <a href="#">Поиск по сайту</a>
+              <a class="main-nav__link" href="#">Поиск по сайту</a>
             </li>
             <li class="user-list__item">
-              <a href="#">Корзина:пока пуста</a>
+              <a class="main-nav__link" href="#">Корзина:пока пуста</a>
             </li>
           </ul>
         </div>
@@ -34,76 +35,76 @@
     <main class="page-main">
       <h1 class="page-main__title">Вязание на заказ</h1>
       <p class="page-main__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      <form class="filter-form" action="https://echo.htmlacademy.ru" method="GET">
-        <fieldset class="filter-form__item filter radio">
+      <form class="filter" action="https://echo.htmlacademy.ru" method="GET">
+        <fieldset class="filter__item radio">
           <legend class="filter__title">Тип</legend>
           <ul class="filter__list">
             <li class="filter__option">
-              <input class="filter__input input-radio" type="radio" name="radio-option" value="Accessory" id="Accessory">
-              <label for="Accessory">Аксессуар для интерьера</label>
+              <input class="filter__input input-radio" type="radio" name="radio-option" value="Accessory" id="Accessory" checked>
+              <label class="filter__label" for="Accessory">Аксессуар для интерьера</label>
             </li>
             <li class="filter__option">
               <input class="filter__input input-radio" type="radio" name="radio-option" value="toy" id="toy">
-              <label for="toy">Детская игрушка</label>
+              <label class="filter__label" for="toy">Детская игрушка</label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter-form__item filter checkbox">
+        <fieldset class="filter__item checkbox">
           <legend class="filter__title">Цвет</legend>
-          <ul class="filter-list">
+          <ul class="filter__list">
             <li class="filter__option">
-              <input class="filter__input input-checkbox" type="checkbox" name="white" id="white">
-              <label for="white">Белый</label></li>
+              <input class="filter__input input-checkbox" type="checkbox" name="white" id="white" checked>
+              <label class="filter__label" for="white">Белый</label></li>
             <li class="filter__option">
-              <input class="filter__input input-checkbox" type="checkbox" name="gray" id="gray">
-              <label for="gray">Серый</label>
+              <input class="filter__input input-checkbox" type="checkbox" name="gray" id="gray" checked>
+              <label class="filter__label" for="gray">Серый</label>
             </li>
             <li class="filter__option">
               <input class="filter__input input-checkbox" type="checkbox" name="tiffany" id="tiffany">
-              <label for="tiffany">«Тиффани»</label>
+              <label class="filter__label" for="tiffany">«Тиффани»</label>
             </li>
             <li class="filter__option">
               <input class="filter__input input-checkbox" type="checkbox" name="black" id="black">
-              <label for="black">Черный</label>
+              <label class="filter__label" for="black">Черный</label>
             </li>
             <li class="filter__option">
               <input class="filter__input input-checkbox" type="checkbox" name="pink" id="pink">
-              <label for="pink">Розовый</label>
+              <label class="filter__label" for="pink">Розовый</label>
             </li>
             <li class="filter__option">
               <input class="filter__input input-checkbox" type="checkbox" name="orange" id="orange">
-              <label for="orange">Оранжевый</label>
+              <label class="filter__label" for="orange">Оранжевый</label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter-form__item filter type-text">
+        <fieldset class="filter__item type-text">
           <legend class="filter__title">ФИО</legend>
           <ul class="filter__list">
             <li class="filter__option">
-              <input class="input-type-text" type="text" name="name" id="name" placeholder="Введите ваше имя*">
-              <label for="name">Имя:</label>
+              <label class="filter__label" for="name">Имя:</label>
+              <input class="filter__input input-type-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
             </li>
             <li class="filter__option">
-              <input class="input-type-text" type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
-              <label for="surname">Фамилия:</label>
+              <label class="filter__label" for="surname">Фамилия:</label>
+              <input class="filter__input input-type-text" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
             </li>
             <li class="filter__option">
-              <input class="input-type-text" type="text" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
-              <label for="middle-name">Отчество:</label>
+              <label class="filter__label" for="middle-name">Отчество:</label>
+              <input class="filter__input input-type-text" type="text" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter-form__item filter type-tel">
+        <fieldset class="filter__item type-tel">
           <legend class="filter__title">Тел</legend>
-          <input class="input-type-tel" type="tel" name="tel" id="tel" placeholder="+7 XXX XXX XX XX*">
+          <input class="filter__input input-type-tel" type="tel" name="tel" id="tel" placeholder="+7 XXX XXX XX XX*" required>
         </fieldset>
-        <fieldset class="filter-form__item filter type-email">
+        <fieldset class="filter__item type-email">
           <legend class="filter__title">E-mail</legend>
-          <input class="input-type-email" type="email" name="email" id="email" placeholder="Ваш E-mail">
+          <input class="filter__input input-type-email" type="email" name="email" id="email" placeholder="Ваш E-mail*" required>
         </fieldset>
-        <fieldset class="filter-form__item filter textarea">
+        <fieldset class="filter__item textarea">
           <legend class="filter__title">Доп</legend>
-          <textarea class="input-type-textarea" name="text" id="text" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <textarea class="filter__input input-type-textarea" name="text" id="text" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
         <span class="filter-form__annotation"><sub>*</sub>Поля обязательны для заполнения</span>
         <button class="button filter-form__button" type="submit">Отправить заказ</button>
