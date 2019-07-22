@@ -1,3 +1,20 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.reviews__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__item {
+  margin: 0;
+  padding: 0;
+}
+
 .reviews__text {
   font-family: @font-family;
   font-weight: normal;
@@ -25,5 +42,30 @@
 
 .reviews__write {
   text-decoration: none;
-  color: black;
+  color: @second-text-color;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    width: 668px;
+  }
+
+  .reviews__list {
+    order: 2;
+  }
+
+  .reviews__write {
+    order: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    width: 1050px;
+  }
+
+  .rewiews__wrapper {
+    width: 875px;
+    margin-left: 175px;
+  }
 }

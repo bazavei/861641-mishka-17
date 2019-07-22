@@ -1,0 +1,18 @@
+.slider__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider__button {
+  border-color: @border-color;
+}
+
+@media (min-width: @tablet-width) {
+  .slider__list {
+    flex-direction: row;
+  }
+
+  .slider__button {
+    border: none;
+  }
+}

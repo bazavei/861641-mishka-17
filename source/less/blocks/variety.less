@@ -1,8 +1,23 @@
 .variety__list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+.variety__item {
+  //временно
+  height: 103px;
+}
+
 .variety__link {
+  display: block;
+  //временно
+  width: 100%;
+  height: 100%;
+  //
   font-family: @font-family;
   font-size: 19px;
   font-weight: bold;
@@ -16,5 +31,27 @@
 
   &--toys {
     background-color: @bg-toys;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .variety__list {
+    flex-direction: row;
+    margin: 0 auto;
+    width: 668px;
+  }
+
+  .variety__item {
+    width: 334px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .variety__list {
+    width: 1050px;
+  }
+
+  .variety__item {
+    width: 525px;
   }
 }
