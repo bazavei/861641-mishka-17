@@ -1,4 +1,12 @@
+.main-nav {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .main-nav__list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -11,4 +19,30 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    width: 320px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    order: -1;
+  }
+
+  .main-nav__list {
+    width: 400px;
+  }
 }

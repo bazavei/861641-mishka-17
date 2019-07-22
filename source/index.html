@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body class="page">
     <header class="page-header">
-      <a class="page-hedear__logo">
-        <img class="page-heder__logo-image" src="/img/logo-mobile.svg" alt="логотип магазина «Мишка»" width="86" height="35">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
+      <div class="page-header__wrapper">
+        <a class="page-hedear__logo">
+          <img class="page-heder__logo-image" src="/img/logo-mobile.svg" alt="логотип магазина «Мишка»" width="86" height="35">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
@@ -21,6 +22,8 @@
               <a class="main-nav__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
+          </nav>
+          <nav class="main-nav user-nav">
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
               <a class="main-nav__link" href="#">Поиск по сайту</a>
@@ -28,13 +31,25 @@
             <li class="user-list__item">
               <a class="main-nav__link" href="#">Корзина:пока пуста</a>
             </li>
-            </ul>
+          </ul>
+        </nav>
+        <div class="page-header__special-offers special-offers">
+          <ul class="special-offers__list">
+            <li class="special-offers__item">
+              <a class="special-offers__link" href="#">Новые поступления</a>
+            </li>
+            <li class="special-offers__item">
+              <a class="special-offers__link" href="#">Распродажа</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+        <p class="page-header__delivery">Бесплатная доставка по России</p>
+      </div>
     </header>
     <main class="page-main">
-      <h1 class="visually-hidden">Магазин милых штучек «Мишка»</h1>
-      <p class="tagline page-main__title">Милые штучки ручной работы для дома</p>
+      <div class="page-main__title-wrapper">
+        <h1 class="page-main__title">Милые штучки ручной работы для дома</h1>
+      </div>
       <section class="variety">
         <ul class="variety__list">
           <li class="variety__item">
