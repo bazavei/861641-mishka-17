@@ -7,6 +7,7 @@
 }
 
 .filter__item {
+  display: flex;
   border: none;
 }
 
@@ -20,6 +21,8 @@
 }
 
 .filter__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -37,4 +40,35 @@
   font-size: 14px;
   line-height: 16px;
   color: @second-text-color;
+}
+
+.input-type-textarea {
+  border: 2px solid @filter-border-color;
+}
+
+@media (min-width: @tablet-width) {
+  .checkbox,
+  .type-tel,
+  .type-email {
+    background-color: @bg-gray;
+  }
+
+  .filter__title {
+    margin: 0;
+    padding: 0;
+  }
+
+  .filter__list {
+    &--checkbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 500px;
+    }
+  }
+
+  .filter__option {
+    width: 50%;
+    margin: 0;
+  }
 }
