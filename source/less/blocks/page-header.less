@@ -8,10 +8,24 @@
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-header__top-wrapper {
+  display: flex;
 }
 
 .page-hedear__logo {
-  height: 36px;
+  height: 79px;
+  text-align: center;
+  border-bottom: 1px solid @border-color;
+}
+
+.page-heder__logo-image {
+  padding-top: 22px;
+  height: 35px;
+  width: 86px;
 }
 
 .page-header__delivery {
@@ -27,11 +41,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 700px;
+    width: 100%;
     margin: 0 auto;
   }
 
   .page-hedear__logo {
+    flex-grow: 1;
     height: 88px;
     width: 320px;
     order: -2;
@@ -46,14 +61,13 @@
     font-size: 15px;
     line-height: 24px;
     color: @second-text-color;
+
+    padding-top: 23px;
+    margin-right: 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-header__wrapper {
-    width: 1050px;
-  }
-
   .page-hedear__logo {
     order: 0;
     width: 300px;

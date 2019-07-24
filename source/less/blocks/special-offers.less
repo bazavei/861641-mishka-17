@@ -10,17 +10,37 @@
 @media (min-width: @desktop-width) {
   .special-offers {
     display: block;
+    padding-left: 50px;
   }
 
   .special-offers__list {
     display: flex;
+    justify-content: space-between;
+
+    width: 350px;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
   .special-offers__link {
+    display: block;
     text-decoration: none;
     color: @main-text-color;
+
+    font-size: 15px;
+    line-height: 24px;
+
+    padding: 0;
+    padding-top: 23px;
+
+    &:hover,
+    &:focus {
+      color: #666666;
+    }
+
+    &:active {
+      color: lighten(@main-text-color, 70%);
+    }
   }
 }
