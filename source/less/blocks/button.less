@@ -1,11 +1,43 @@
 .button {
+  display: block;
+
   font-family: @font-family;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   color: @second-text-color;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 
   background-color: white;
   border: 2px solid @button-border-color;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  padding: 0;
+  margin: 0;
+
+  width: 260px;
+  height: 52px;
+
+  &:hover,
+  &:focus {
+    color: @white-text-color;
+    background-color: @bg-btn-hover;
+  }
+
+  &:active {
+    color: fade(@white-text-color, 30%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    letter-spacing: 0;
+
+    &--buy {
+      width: 293px;
+    }
+  }
 }

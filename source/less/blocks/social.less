@@ -1,7 +1,48 @@
+.social {
+  margin-bottom: 44px;
+}
+
 .social__list {
   display: flex;
+  justify-content: space-between;
 
-  margin: 0;
+  margin: 0 auto;
+  margin-top: 25px;
   padding: 0;
   list-style: none;
+
+  width: 145px;
+}
+
+.social__item {
+  &--inst {
+    width: 22px;
+    height: 21px;
+    margin-top: 5px;
+  }
+
+  &--fb {
+    width: 15px;
+    height: 28px;
+  }
+
+  &--twit {
+    width: 23px;
+    height: 34px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    margin-top: 6px;
+    margin-left: 83px;
+    margin-bottom: 45px;
+  }
+
+  .social__list {
+    padding: 0;
+    margin: 0;
+  }
 }

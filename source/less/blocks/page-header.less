@@ -26,6 +26,15 @@
   padding-top: 22px;
   height: 35px;
   width: 86px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-header__delivery {
@@ -46,9 +55,8 @@
   }
 
   .page-hedear__logo {
-    flex-grow: 1;
     height: 88px;
-    width: 320px;
+    width: 371px;
     order: -2;
   }
 
@@ -62,7 +70,7 @@
     line-height: 24px;
     color: @second-text-color;
 
-    padding-top: 23px;
+    padding-top: 17px;
     margin-right: 50px;
   }
 }
@@ -70,6 +78,6 @@
 @media (min-width: @desktop-width) {
   .page-hedear__logo {
     order: 0;
-    width: 300px;
+    width: 310px;
   }
 }

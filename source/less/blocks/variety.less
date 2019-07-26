@@ -1,23 +1,21 @@
 .variety__list {
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.variety__item {
-  //временно
-  height: 103px;
-}
-
 .variety__link {
   display: block;
-  //временно
-  width: 100%;
-  height: 100%;
-  //
+  position: relative;
+
+  padding-left: 29px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+
   font-family: @font-family;
   font-size: 19px;
   font-weight: bold;
@@ -27,14 +25,59 @@
 
   &--decor {
     background-color: @bg-decor;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #59d5bc;
+    }
   }
 
   &--toys {
     background-color: @bg-toys;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #46c1ae;
+    }
+  }
+
+  &:hover .variety__icon,
+  &:focus .variety__icon {
+    opacity: 0.7;
+  }
+
+  &:active {
+    color: fade(white, 30%);
+  }
+
+  &:active .variety__icon {
+    opacity: 0.3;
+  }
+}
+
+.variety__icon {
+  position: absolute;
+  top: 23px;
+  right: 37px;
+  opacity: 0.5;
+
+  path {
+    fill: #149080;
+  }
+
+  &--toys {
+    right: 27px;
   }
 }
 
 @media (min-width: @tablet-width) {
+  .variety {
+    margin-top: -120px;
+    margin-bottom: 46px;
+  }
+
   .variety__list {
     flex-direction: row;
     margin: 0 auto;
@@ -43,6 +86,24 @@
 
   .variety__item {
     width: 334px;
+  }
+
+  .variety__link {
+    font-size: 20px;
+    line-height: 30px;
+
+    padding-left: 35px;
+    padding-top: 28px;
+    padding-bottom: 30px;
+  }
+
+  .variety__icon {
+    top: 30px;
+
+    &--toys {
+      top: 32px;
+      right: 35px;
+    }
   }
 }
 

@@ -13,6 +13,20 @@
   margin: 0 auto;
 }
 
+.page-footer__social {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 2px;
+    width: 260px;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .page-footer__logo {
     display: block;
@@ -22,6 +36,13 @@
     flex-direction: row;
     justify-content: space-between;
     width: 668px;
+    padding-top: 50px;
+  }
+
+  .page-footer__social {
+    &::before {
+      display: none;
+    }
   }
 }
 
