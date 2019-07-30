@@ -56,17 +56,15 @@
         <p class="page-header__delivery">Бесплатная доставка по России</p>
       </div>
     </header>
-            <main class="page-main">
+    <main class="page-main">
       <div class="page-main__title-wrapper">
         <h1 class="page-main__title">Вязание на заказ</h1>
       </div>
-      <div class="container">
-        <p class="page-main__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      </div>
+      <p class="page-main__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="filter container" action="https://echo.htmlacademy.ru" method="GET">
-        <fieldset class="filter__item radio">
+        <fieldset class="filter__item filter__radio">
           <legend class="filter__title">Тип</legend>
-          <ul class="filter__list">
+          <ul class="filter__list filter__list--radio">
             <li class="filter__option">
               <input class="filter__input input-radio" type="radio" name="radio-option" value="Accessory" id="Accessory" checked>
               <label class="filter__label" for="Accessory">Аксессуар для интерьера</label>
@@ -77,7 +75,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter__item checkbox">
+        <fieldset class="filter__item filter__checkbox">
           <legend class="filter__title">Цвет</legend>
           <ul class="filter__list filter__list--checkbox">
             <li class="filter__option">
@@ -105,9 +103,9 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter__item type-text">
+        <fieldset class="filter__item filter__type-text">
           <legend class="filter__title">ФИО</legend>
-          <ul class="filter__list">
+          <ul class="filter__list filter__list--text">
             <li class="filter__option">
               <label class="filter__label" for="name">Имя:</label>
               <input class="filter__input input-type-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
@@ -122,15 +120,15 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter__item type-tel">
+        <fieldset class="filter__item filter__type-tel">
           <legend class="filter__title">Тел</legend>
           <input class="filter__input input-type-tel" type="tel" name="tel" id="tel" placeholder="+7 XXX XXX XX XX*" required>
         </fieldset>
-        <fieldset class="filter__item type-email">
+        <fieldset class="filter__item filter__type-email">
           <legend class="filter__title">E-mail</legend>
-          <input class="filter__input input-type-email" type="email" name="email" id="email" placeholder="Ваш E-mail*" required>
+          <input class="filter__input input-type-email" type="email" name="email" id="email" placeholder="Ваш Email*" required>
         </fieldset>
-        <fieldset class="filter__item textarea">
+        <fieldset class="filter__item filter__textarea">
           <legend class="filter__title">Доп</legend>
           <textarea class="filter__input input-type-textarea" name="text" id="text" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
