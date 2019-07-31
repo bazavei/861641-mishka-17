@@ -4,15 +4,32 @@
   font-size: 17px;
   line-height: 18px;
   color: @main-text-color;
+
+  width: 260px;
+  margin: 0 auto;
 }
 
 .filter__item {
   display: flex;
+  flex-direction: column;
   border: none;
 
   margin: 0;
   padding: 0;
+}
+
+.filter__radio {
   margin-bottom: 10px;
+}
+
+.filter__checkbox {
+  margin-bottom: 0;
+}
+
+.filter__type-tel {
+  .filter__title {
+    margin-bottom: 22px;
+  }
 }
 
 .filter__title {
@@ -25,7 +42,11 @@
 
   padding-top: 11px;
   margin-left: -3px;
-  margin-bottom: 34px;
+
+  &--name {
+    padding-top: 0;
+    margin-bottom: 34px;
+  }
 }
 
 .filter__list {
@@ -34,7 +55,8 @@
   list-style: none;
 
   width: 200px;
-  margin-left: 63px;
+  margin-left: 62px;
+  margin-top: 34px;
 
   &--checkbox {
     .filter__option {
@@ -47,6 +69,15 @@
     margin-top: -5px;
   }
 }
+
+.filter__info {
+  margin-bottom: 38px;
+
+  .filter__title {
+    margin-bottom: 23px;
+  }
+}
+
 
 .type-text {
   margin-top: -21px;
@@ -67,13 +98,9 @@
   }
 }
 
-.textarea {
+.filter__textarea {
   margin-top: 37px;
   margin-bottom: 13px;
-
-  .filter__title {
-    margin-bottom: 25px;
-  }
 }
 
 .filter__option {
@@ -85,6 +112,11 @@
 .input-type-text {
   margin-top: 18px;
   margin-bottom: 13px;
+  margin-left: -3px;
+}
+
+.input-type-tel {
+  letter-spacing: 1px;
   margin-left: -3px;
 }
 
@@ -133,7 +165,51 @@
 
 @media (min-width: @tablet-width) {
   .filter {
+    position: relative;
     font-size: 19px;
+    width: 768px;
+  }
+
+  .filter__checkbox {
+    .filter__title {
+      padding-top: 50px;
+    }
+  }
+
+  .filter__info {
+    margin-bottom: 0;
+  }
+
+  .filter__type-text {
+    margin-bottom: 13px;
+  }
+
+  .filter__type-tel {
+    padding-top: 48px;
+  }
+
+  .filter__type-email {
+    padding-bottom: 28px;
+  }
+
+  .filter__textarea {
+    padding-top: 13px;
+  }
+
+  .input-type-email,
+  .input-type-tel {
+    background-color: @bg-gray;
+    border: none;
+    letter-spacing: 1px;
+    width: 175px;
+    height: 52px;
+    margin-left: 4px;
+  }
+
+  .input-type-textarea {
+    margin-left: -13px;
+    width: 493px;
+    letter-spacing: 1.2px;
   }
 
   .filter__checkbox,
@@ -149,47 +225,131 @@
     align-items: center;
     width: 25%;
     height: 52px;
+
+    &--name {
+      padding-top: 50px;
+    }
   }
 
   .filter__list {
     width: 510px;
-    margin-left: 247px;
+    margin-top: 18px;
+    margin-left: 81px;
 
     &--checkbox {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       width: 500px;
+      margin-top: 65px;
+      margin-bottom: 10px;
+
+      .filter__option {
+        margin-bottom: 58px;
+        margin-right: 3px;
+      }
     }
 
-    &--radio {
-      margin-top: -55px;
+    &--text {
+      margin-left: -12px;
+      margin-top: 65px;
     }
   }
 
   .filter__item {
-    margin-bottom: 3px;
+    flex-direction: row;
     box-sizing: border-box;
     padding-left: 50px;
   }
 
-  .filter__radio {
-    padding-top: 20px;
+  .filter__option {
+    min-width: 44%;
+    margin: 0;
+    margin-bottom: 58px;
+
+    &--user-info {
+      margin-bottom: 53px;
+      flex-direction: row;
+    }
   }
 
-  .filter__checkbox {
-    padding-top: 58px;
-    padding-bottom: 13px;
+  .input-type-text {
+    font-size: 19px;
+    letter-spacing: 1.2px;
 
-    .filter__option {
-      margin-bottom: 57px;
-      margin-right: -12px;
+    margin: 0;
+    width: 350px;
+    margin-left: 39px;
+    margin-top: -5px;
+  }
+
+  .filter-form__button {
+    width: 230px;
+    margin-top: 53px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+  }
+
+  .filter-form__annotation {
+    position: absolute;
+    bottom: 15px;
+    right: 50px;
+
+    font-size: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter {
+    width: 1150px;
+  }
+
+  .filter__item {
+    padding-left: 113px;
+  }
+
+  .filter__title {
+    width: 13%;
+  }
+
+  .filter__list {
+    width: 875px;
+    margin-left: 60px;
+
+    &--checkbox {
+      margin-right: 90px;
+      margin-left: 75px;
+    }
+
+    &--text {
+      margin-left: -21px;
     }
   }
 
   .filter__option {
-    width: 50%;
-    margin: 0;
-    margin-bottom: 58px;
+    min-width: 30%;
+  }
+
+  .filter__info {
+    .filter__input {
+      margin-left: -6px;
+    }
+  }
+
+  .filter__textarea{
+    .input-type-textarea {
+      margin-left: -23px;
+      width: 692px;
+    }
+  }
+
+  .filter-form__button {
+    margin-top: 47px;
+    margin-left: 225px;
+  }
+
+  .filter-form__annotation {
+    bottom: 12px;
+    right: 224px;
   }
 }

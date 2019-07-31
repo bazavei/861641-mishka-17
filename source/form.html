@@ -61,9 +61,9 @@
         <h1 class="page-main__title">Вязание на заказ</h1>
       </div>
       <p class="page-main__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      <form class="filter container" action="https://echo.htmlacademy.ru" method="GET">
-        <fieldset class="filter__item filter__radio">
-          <legend class="filter__title">Тип</legend>
+      <form class="filter" action="https://echo.htmlacademy.ru" method="GET">
+        <div class="filter__item filter__radio">
+          <label class="filter__title">Тип</label>
           <ul class="filter__list filter__list--radio">
             <li class="filter__option">
               <input class="filter__input input-radio" type="radio" name="radio-option" value="Accessory" id="Accessory" checked>
@@ -74,9 +74,9 @@
               <label class="filter__label" for="toy">Детская игрушка</label>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="filter__item filter__checkbox">
-          <legend class="filter__title">Цвет</legend>
+        </div>
+        <div class="filter__item filter__checkbox">
+          <label class="filter__title">Цвет</label>
           <ul class="filter__list filter__list--checkbox">
             <li class="filter__option">
               <input class="filter__input input-checkbox" type="checkbox" name="white" id="white" checked>
@@ -102,36 +102,36 @@
               <label class="filter__label" for="orange">Оранжевый</label>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="filter__item filter__type-text">
-          <legend class="filter__title">ФИО</legend>
+        </div>
+        <div class="filter__item filter__type-text">
+          <label class="filter__title filter__title--name">ФИО</label>
           <ul class="filter__list filter__list--text">
-            <li class="filter__option">
+            <li class="filter__option filter__option--user-info">
               <label class="filter__label" for="name">Имя:</label>
               <input class="filter__input input-type-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
             </li>
-            <li class="filter__option">
+            <li class="filter__option filter__option--user-info">
               <label class="filter__label" for="surname">Фамилия:</label>
               <input class="filter__input input-type-text" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
             </li>
-            <li class="filter__option">
+            <li class="filter__option filter__option--user-info">
               <label class="filter__label" for="middle-name">Отчество:</label>
               <input class="filter__input input-type-text" type="text" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="filter__item filter__type-tel">
+        </div>
+        <div class="filter__item filter__info filter__type-tel">
           <legend class="filter__title">Тел</legend>
           <input class="filter__input input-type-tel" type="tel" name="tel" id="tel" placeholder="+7 XXX XXX XX XX*" required>
-        </fieldset>
-        <fieldset class="filter__item filter__type-email">
+        </div>
+        <div class="filter__item filter__info filter__type-email">
           <legend class="filter__title">E-mail</legend>
           <input class="filter__input input-type-email" type="email" name="email" id="email" placeholder="Ваш Email*" required>
-        </fieldset>
-        <fieldset class="filter__item filter__textarea">
+        </div>
+        <div class="filter__item filter__info filter__textarea">
           <legend class="filter__title">Доп</legend>
           <textarea class="filter__input input-type-textarea" name="text" id="text" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-        </fieldset>
+        </div>
         <span class="filter-form__annotation"><sub>*</sub>Поля обязательны для заполнения</span>
         <button class="button filter-form__button" type="submit">Отправить заказ</button>
       </form>
