@@ -4,27 +4,151 @@
   font-size: 17px;
   line-height: 18px;
   color: @main-text-color;
+
+  width: 260px;
+  margin: 0 auto;
 }
 
 .filter__item {
   display: flex;
+  flex-direction: column;
   border: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.filter__info {
+  margin-bottom: 21px;
+
+  .filter__title {
+    margin-bottom: 6px;
+  }
+}
+
+.filter__radio {
+  margin-bottom: 10px;
+}
+
+.filter__checkbox {
+  margin-bottom: 0;
 }
 
 .filter__title {
+  position: relative;
+
   font-family: @font-family;
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
   text-transform: uppercase;
   color: @green-text-color;
+
+  padding-top: 11px;
+  margin-left: -3px;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    bottom: 8px;
+    left: 66px;
+
+    height: 1px;
+    width: 198px;
+
+    background-color: @green-text-color;
+  }
+
+  &--name {
+    padding-top: 0;
+    margin-bottom: 34px;
+  }
+
+  &--email {
+    &::before {
+      width: 179px;
+      left: 83px;
+    }
+  }
 }
 
 .filter__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  width: 200px;
+  margin-left: 62px;
+  margin-top: 34px;
+
+  &--checkbox {
+    .filter__option {
+      margin-bottom: 43px;
+    }
+  }
+
+  &--text {
+    margin-left: 0;
+    margin-top: -5px;
+  }
 }
+
+.type-text {
+  margin-top: -21px;
+}
+
+.type-tel {
+  margin-top: -12px;
+  margin-bottom: 39px;
+
+  .filter__title {
+    margin-bottom: 23px;
+  }
+}
+
+.type-email {
+  .filter__title {
+    margin-bottom: 23px;
+  }
+}
+
+.filter__textarea {
+  margin-bottom: 13px;
+}
+
+.filter__option {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+
+  &--user-info {
+    margin-bottom: 22px;
+  }
+}
+
+.filter__input {
+  &--user-info {
+    width: 260px;
+    box-sizing: border-box;
+    padding-bottom: 17px;
+    padding-top: 20px;
+    border: none;
+    border-bottom: 2px solid @filter-border-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-bottom-color: #62d1ba;
+      outline: none;
+
+      .filter__input::placeholder {
+        color: @second-text-color;
+      }
+    }
+  }
+}
+
 
 .filter__input::placeholder {
   font-family: @font-family;
@@ -42,33 +166,258 @@
   color: @second-text-color;
 }
 
+.input-radio,
+.input-checkbox {
+  display: none;
+}
+
 .input-type-textarea {
-  border: 2px solid @filter-border-color;
+  margin-top: 19px;
+  width: 240px;
+  height: 121px;
+  border: 2px solid #444444;
+
+  padding-top: 15px;
+  padding-left: 14px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: #62d1ba;
+    outline: none;
+
+    .filter__input::placeholder {
+      color: @second-text-color;
+    }
+  }
+}
+
+.filter-form__button {
+  margin-top: 27px;
+  margin-bottom: 56px;
+
+  letter-spacing: 0;
 }
 
 @media (min-width: @tablet-width) {
-  .checkbox,
-  .type-tel,
-  .type-email {
+  .filter {
+    position: relative;
+    font-size: 19px;
+    width: 768px;
+  }
+
+  .filter__checkbox {
+    .filter__title {
+      padding-top: 50px;
+    }
+  }
+
+  .filter__input {
+    width: 375px;
+    padding-bottom: 16px;
+    padding-top: 3px;
+    padding-left: 17px;
+  }
+
+  .filter__info {
+    margin-bottom: 0;
+  }
+
+  .filter__type-text {
+    margin-bottom: 13px;
+  }
+
+  .filter__type-tel {
+    padding-top: 48px;
+  }
+
+  .filter__type-email {
+    padding-top: 18px;
+    padding-bottom: 44px;
+  }
+
+  .filter__textarea {
+    padding-top: 50px;
+  }
+
+  .input-type-email,
+  .input-type-tel {
+    background-color: #ededed;
+    letter-spacing: 1px;
+    width: 501px;
+    height: 53px;
+
+    margin-left: -13px;
+    padding-top: 14px;
+    padding-bottom: 13px;
+    padding-left: 17px;
+  }
+
+  .input-type-textarea {
+    width: 481px;
+    height: 108px;
+    margin-top: 0;
+    margin-left: -13px;
+    padding-top: 15px;
+    padding-left: 14px;
+    letter-spacing: 1.2px;
+  }
+
+  .filter__checkbox,
+  .filter__type-tel,
+  .filter__type-email {
     background-color: @bg-gray;
   }
 
   .filter__title {
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    width: 25%;
+    height: 52px;
+
+    &--name {
+      padding-top: 50px;
+    }
+
+    &::before {
+      display: none;
+    }
   }
 
   .filter__list {
+    width: 510px;
+    margin-top: 18px;
+    margin-left: 81px;
+
     &--checkbox {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       width: 500px;
+      margin-top: 65px;
+      margin-bottom: 10px;
+
+      .filter__option {
+        margin-bottom: 58px;
+        margin-right: 3px;
+      }
+    }
+
+    &--text {
+      margin-left: -12px;
+      margin-top: 65px;
+    }
+  }
+
+  .filter__item {
+    flex-direction: row;
+    box-sizing: border-box;
+    padding-left: 50px;
+  }
+
+  .filter__option {
+    min-width: 44%;
+    margin: 0;
+    margin-bottom: 58px;
+
+    &--user-info {
+      margin-bottom: 38px;
+      flex-direction: row;
+    }
+  }
+
+  .input-type-text {
+    font-size: 19px;
+    letter-spacing: 1.2px;
+
+    margin: 0;
+    margin-left: 25px;
+    margin-top: -5px;
+
+    &--name {
+      width: 428px;
+    }
+  }
+
+  .filter-form__button {
+    width: 230px;
+    margin-top: 53px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+  }
+
+  .filter-form__annotation {
+    position: absolute;
+    bottom: 15px;
+    right: 50px;
+
+    font-size: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter {
+    width: 1150px;
+  }
+
+  .filter__item {
+    padding-left: 113px;
+  }
+
+  .filter__title {
+    width: 13%;
+  }
+
+  .input-type-text {
+    width: 573px;
+
+    &--name {
+      width: 626px;
+    }
+  }
+
+  .input-type-tel,
+  .input-type-email {
+    width: 701px;
+    margin-left: -23px;
+  }
+
+  .filter__list {
+    width: 875px;
+    margin-left: 60px;
+
+    &--checkbox {
+      margin-right: 90px;
+      margin-left: 75px;
+    }
+
+    &--text {
+      margin-left: -21px;
     }
   }
 
   .filter__option {
-    width: 50%;
-    margin: 0;
+    min-width: 30%;
+  }
+
+  .input-type-textarea {
+    width: 680px;
+    height: 109px;
+    margin-top: 0;
+    margin-left: -23px;
+    padding-top: 14px;
+    letter-spacing: 1.2px;
+  }
+
+  .filter-form__button {
+    margin-top: 47px;
+    margin-left: 225px;
+  }
+
+  .filter-form__annotation {
+    bottom: 12px;
+    right: 224px;
   }
 }

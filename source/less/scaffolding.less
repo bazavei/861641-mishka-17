@@ -1,11 +1,14 @@
-.page {
-  min-width: 320px;
-  margin: 0;
+body {
+  width: 320px;
+  margin: 0 auto;
   padding: 0;
   font-size: 18px;
   line-height: 27px;
   font-family: @font-family;
   background-color: @bg-header;
+  // background: @bg-header url("../img/m-i-m.png") no-repeat 50% 0;
+  background-size: 720px auto;
+  min-height: 750px;
 }
 
 img {
@@ -13,14 +16,10 @@ img {
   height: auto;
 }
 
-body {
-  // background: @bg-header url("../img/m-i-m.png") no-repeat 50% 0;
-  background-size: 720px auto;
-  min-height: 750px;
-}
 
 @media (min-width: @tablet-width) {
   body {
+    width: 768px;
     // background: @bg-header url("../img/m-i-t.png") no-repeat 50% 0;
     background-size: 1178px auto;
   }
@@ -28,6 +27,7 @@ body {
 
 @media (min-width: @desktop-width) {
   body {
+    width: 1150px;
     // background: @bg-header url("../img/m-i-d.png") no-repeat 50% 0;
     background-size: 1391px auto;
   }

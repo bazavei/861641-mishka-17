@@ -1,6 +1,7 @@
 .about-us {
   width: 260px;
   margin: 0 auto;
+  margin-top: 70px;
 }
 
 .about-us__title {
@@ -9,16 +10,37 @@
   font-size: 25px;
   line-height: 30px;
   color: @main-text-color;
+
+  margin-bottom: 87px;
 }
 
 .about-us__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 180px;
 }
 
 @media (min-width: @tablet-width) {
   .about-us {
-    width: 668px;
+    width: 670px;
+    margin-bottom: 50px;
+  }
+
+  .about-us__title {
+    margin-top: 119px;
+    margin-left: -4px;
+    margin-bottom: 105px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    width: 701px;
+    margin-top: 156px;
+  }
+
+  .about-us__title {
+    margin-top: 78px;
   }
 }

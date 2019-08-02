@@ -3,11 +3,16 @@
   flex-direction: column;
   width: 260px;
   margin: 0 auto;
+  margin-bottom: 71px;
 }
 
 .reviews__wrapper {
   display: flex;
   flex-direction: column;
+}
+
+.reviews__title {
+  margin-bottom: 10px;
 }
 
 .reviews__item {
@@ -16,6 +21,8 @@
 }
 
 .reviews__text {
+  margin-bottom: 24px;
+
   font-family: @font-family;
   font-weight: normal;
   font-size: 15px;
@@ -35,26 +42,77 @@
 .reviews__author-nickname {
   font-family: @font-family;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 30px;
   color: @second-text-color;
+
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .reviews__write {
   text-decoration: none;
   color: @second-text-color;
+  padding: 14px 15px;
 }
 
 @media (min-width: @tablet-width) {
   .reviews {
+    position: relative;
     width: 668px;
+    margin-bottom: 122px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -78px;
+      left: -50px;
+      z-index: -1;
+      width: 350px;
+      height: 457px;
+      background: url("../img/review@1x.jpg") no-repeat 0 0;
+    }
+  }
+
+  .rewiews__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .reviews__title {
+    width: 182px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 14px;
+    margin-left: -5px;
   }
 
   .reviews__list {
     order: 2;
   }
 
+  .reviews__item {
+    width: 668px;
+  }
+
+  .reviews__text {
+    font-size: 17px;
+    margin-top: 34px;
+    margin-bottom: 54px;
+  }
+
+  .reviews__author-name {
+    font-size: 18px;
+  }
+
+  .reviews__author-nickname {
+    width: 250px;
+  }
+
   .reviews__write {
+    width: 175px;
     order: 1;
   }
 }
@@ -62,10 +120,32 @@
 @media (min-width: @desktop-width) {
   .reviews {
     width: 1050px;
+    margin-bottom: 220px;
+
+    &::before {
+      top: -70px;
+      left: 1px;
+    }
   }
 
   .rewiews__wrapper {
     width: 875px;
     margin-left: 175px;
+  }
+
+  .reviews__item {
+    width: 775px;
+  }
+
+  .reviews__text {
+    margin-bottom: 37px;
+  }
+
+  .reviews__author-name {
+    font-size: 17px;
+  }
+
+  .reviews__write {
+    margin-top: 10px;
   }
 }

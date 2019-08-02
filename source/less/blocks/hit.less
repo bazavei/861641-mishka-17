@@ -5,6 +5,11 @@
   margin: 0 auto;
 }
 
+.hit__title {
+  margin-top: 27px;
+  margin-bottom: 2px;
+}
+
 .hit__mark {
   font-family: @font-family;
   font-weight: bold;
@@ -12,17 +17,31 @@
   line-height: 20px;
   color: @green-text-color;
   text-transform: uppercase;
+
+  br {
+    display: none;
+  }
+}
+
+.hit__wrapper {
+  margin-bottom: 28px;
 }
 
 .hit__description {
+  margin-top: 21px;
+  margin-bottom: 16px;
+
   font-family: @font-family;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+  letter-spacing: 0.5px;
   color: @second-text-color;
 }
 
 .hit__parameter {
+  width: 230px;
+
   font-family: @font-family;
   font-weight: normal;
   font-size: 14px;
@@ -36,51 +55,118 @@
   font-size: 17px;
   line-height: 24px;
   color: @second-text-color;
+  text-align: center;
+
+  margin-top: 23px;
+  margin-bottom: 25px;
 }
 
 @media (min-width: @tablet-width) {
   .hit {
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
     width: 668px;
   }
 
   .hit__title-wrapper {
     display: flex;
-    width: 668px;
+    justify-content: space-between;
+    width: 641px;
+    margin-bottom: 49px;
+  }
+
+  .hit__title {
+    padding: 0;
+    margin: 0;
+    margin-left: -3px;
+  }
+
+  .hit__mark {
+    line-height: 17px;
+
+    padding-top: 9px;
+    text-align: center;
+
+    br {
+      display: block;
+    }
   }
 
   .hit__wrapper {
     width: 324px;
+    margin-right: 10px;
+  }
+
+  .hit__description {
+    margin: 0;
+    padding: 0;
+
+    width: 285px;
+
+    font-size: 17px;
+    line-height: 30px;
+    letter-spacing: 0;
+  }
+
+  .hit__parameter {
+    margin-top: 35px;
+    width: 290px;
+  }
+
+  .hit__image {
+    width: 333px;
+    height: 404px;
+    margin-top: 8px;
   }
 
   .hit__order-wrapper {
-    margin-top: -80px;
+    margin-top: -124px;
+    margin-left: -2px;
+  }
+
+  .hit__price {
+    margin-top: 14px;
+    margin-bottom: 34px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .hit {
-    width: 1050px;
+    flex-direction: column;
+    position: relative;
+    width: 875px;
+    margin-left: 225px;
   }
 
   .hit__title-wrapper {
-    width: 1050px;
+    width: 650px;
+    margin-top: 77px;
+    margin-left: -131px;
   }
 
   .hit__mark {
+    padding-top: 17px;
     order: -1;
   }
 
   .hit__wrapper {
     width: 360px;
-    margin-left: 160px;
+    margin: 0;
+  }
+
+  .hit__parameter {
+    margin-top: 49px;
   }
 
   .hit__order-wrapper {
     display: flex;
     flex-direction: column;
-    width: 360px;
+    width: 292px;
+
+    margin-top: 94px;
+    margin-left: 0;
   }
 
   .hit-price {
@@ -92,7 +178,12 @@
   }
 
   .hit__image {
+    position: absolute;
+    top: 17px;
+    right: 0;
+
     width: 525px;
     height: 635px;
+    z-index: -1;
   }
 }
