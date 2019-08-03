@@ -1,3 +1,8 @@
+.product__image-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
 .product__title {
   font-family: @font-family;
   font-weight: bold;
@@ -6,8 +11,8 @@
   color: @main-text-color;
 
   padding-left: 27px;
-  padding-top: 9px;
-  margin-bottom: 5px;
+  padding-top: 4px;
+  margin-bottom: 4px;
 }
 
 .product__parameter {
@@ -23,6 +28,8 @@
 }
 
 .product__price {
+  position: relative;
+
   font-family: @font-family;
   font-weight: bold;
   font-size: 15px;
@@ -35,6 +42,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .product__image-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   .product__image {
     display: block;
     width: 334px;

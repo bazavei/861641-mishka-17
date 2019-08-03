@@ -3,6 +3,10 @@
   justify-content: space-between;
   width: 185px;
   margin: 0 auto;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
@@ -17,6 +21,24 @@
   display: block;
   // width: 27px;
   // height: 34px;
+
+  &:hover ,
+  &:focus {
+    .copyright__logo {
+      path {
+        fill: #46c1ae;
+      }
+    }
+  }
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+
+  path {
+    fill: #63d1bb;
+  }
 }
 
 @media (min-width: @tablet-width) {
