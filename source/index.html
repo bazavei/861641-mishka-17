@@ -226,7 +226,12 @@
             </table>
           </div>
           <p class="contacts__map map">
-            <img class="map__image" src="/img/map-mobile@1x.jpg" alt="Мишка на карте" width="320" height="457">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="/img/map-desktop@1x.jpg 1x, /img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="/img/map-tablet@1x.jpg 1x, /img/map-tablet@2x.jpg 2x">
+              <img class="map__image" src="/img/map-mobile@1x.jpg" srcset="/img/map-mobile@2x 2x" alt="Мишка на карте" width="320" height="457">
+            </picture>
+
           </p>
           <button class="contacts__write button">Напишите нам</button>
         </div>
