@@ -71,6 +71,11 @@
       width: 350px;
       height: 457px;
       background: url("../img/review@1x.jpg") no-repeat 0 0;
+      background-size: cover;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/review@2x.jpg");
+      }
     }
   }
 
