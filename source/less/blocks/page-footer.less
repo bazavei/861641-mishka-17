@@ -9,8 +9,11 @@
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
+
+  box-sizing: border-box;
   width: 260px;
   margin: 0 auto;
+  padding-bottom: 23px;
 }
 
 .page-footer__social {
@@ -30,6 +33,26 @@
 @media (min-width: @tablet-width) {
   .page-footer__logo {
     display: block;
+    width: 102px;
+    height: 34px;
+
+    &:hover,
+    &:focus {
+      .page-footer__logo-icon {
+        fill: #46c1ae;
+      }
+    }
+
+    &:active {
+      .page-footer__logo-icon {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .page-footer__logo-icon {
+    width: 100%;
+    height: 100%;
   }
 
   .page-footer__wrapper {

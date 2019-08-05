@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   border: none;
+  position: relative;
 
   margin: 0;
   padding: 0;
@@ -152,7 +153,21 @@
         color: @second-text-color;
       }
     }
+
+    &:hover + .filter__input-icon,
+    &:focus + .filter__input-icon,
+    &:active + .filter__input-icon {
+      fill: #62d1ba;
+      opacity: 1;
+    }
   }
+}
+
+.filter__input-icon {
+  position: absolute;
+  top: 43px;
+  right: 6px;
+  opacity: 0.2;
 }
 
 
@@ -162,6 +177,66 @@
   font-size: 17px;
   line-height: 18px;
   color: lighten(@second-text-color, 50%);
+}
+
+.filter__label {
+  position: relative;
+
+  &--radio {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -9px;
+      left: -62px;
+
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+
+      box-sizing: border-box;
+      border-radius: 50%;
+      border: 2px solid @input-border-color;
+      background-clip: content-box;
+    }
+  }
+
+  &--checkbox {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -62px;
+
+      width: 40px;
+      height: 39px;
+
+      box-sizing: border-box;
+      border: 2px solid @input-border-color;
+      background-position: 50% 50%;
+      background-size: 22px 16px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.input-radio:checked + .filter__label--radio::before {
+  background-color: @radio-bg-color;
+}
+
+.input-checkbox:checked + .filter__label--checkbox::before {
+  background-image: url("../img/icon-tick.svg");
+}
+
+.input-radio + .filter__label:hover::before,
+.input-radio + .filter__label:focus::before,
+.input-checkbox + .filter__label:hover::before,
+.input-checkbox + .filter__label:focus::before {
+  border-color: @input-hover;
+}
+
+.input-radio + .filter__label:active::before,
+.input-checkbox + .filter__label:active::before {
+  border-color: @input-active;
 }
 
 .filter-form__annotation {
@@ -210,6 +285,29 @@
     position: relative;
     font-size: 19px;
     width: 768px;
+  }
+
+  .filter__label {
+    &--radio {
+      &::before {
+        top: -17px;
+        left: -81px;
+
+        width: 54px;
+        height: 53px;
+        padding: 14px;
+      }
+    }
+
+    &--checkbox {
+      &::before {
+        top: -15px;
+        left: -81px;
+
+        width: 54px;
+        height: 52px;
+      }
+    }
   }
 
   .filter__checkbox {
@@ -361,6 +459,16 @@
 
     font-size: 17px;
   }
+
+  .filter__input-icon {
+    top: 29px;
+    right: 72px;
+
+    &--tel {
+      top: 60px;
+      right: 76px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -425,5 +533,15 @@
   .filter-form__annotation {
     bottom: 12px;
     right: 224px;
+  }
+
+  .filter__input-icon {
+    top: 29px;
+    right: 229px;
+
+    &--tel {
+      top: 60px;
+      right: 233px;
+    }
   }
 }
