@@ -59,10 +59,37 @@
 }
 
 .product__link-to-cart {
+  position: relative;
+
   width: 20px;
   height: 19px;
 
   margin-right: 26px;
+}
+.product {
+  &:hover .product__title,
+  &:focus .product__title {
+    color: fade(@main-text-color, 60%);
+  }
+
+  &:active .product__title {
+    color: fade(@main-text-color, 30%);
+  }
+
+  &:hover .product__link-icon,
+  &:focus .product__link-icon {
+    fill: #63d1bb;
+    opacity: 1;
+  }
+
+  &:active .product__link-icon {
+    opacity: 0.3;
+  }
+}
+
+.product__link-icon {
+  position: absolute;
+  opacity: 0.2;
 }
 
 @media (min-width: @tablet-width) {
