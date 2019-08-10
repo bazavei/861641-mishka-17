@@ -1,0 +1,37 @@
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: @mobile-width-only) {
+  .menu-toggle {
+    z-index: 2;
+
+    display: block;
+    width: 21px;
+    height: 20px;
+
+    margin: 0;
+    padding: 0;
+
+    background: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    &--closed {
+      background-image: url("../img/icon-menu-open.svg");
+    }
+
+    &--opened {
+      background-image: url("../img/icon-menu-close.svg");
+    }
+
+    &--nojs {
+      display: none;
+    }
+  }
+}

@@ -1,3 +1,7 @@
+.user-nav {
+  position: relative;
+}
+
 .user-list__item {
   border-bottom: 1px solid @border-color;
 }
@@ -9,6 +13,20 @@
   left: 31px;
 
   opacity: 0.3;
+}
+
+@media (max-width: @mobile-width-only) {
+  .user-nav--closed {
+    display: none;
+  }
+
+  .user-nav--opened {
+    display: block;
+  }
+
+  .user-nav--nojs {
+    display: block;
+  }
 }
 
 @media (min-width: @tablet-width) {

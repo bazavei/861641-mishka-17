@@ -1,7 +1,22 @@
 .map {
+  position: relative;
   width: 320px;
   height: 457px;
   margin-bottom: 40px;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    width: 67px;
+    height: 100px;
+
+    top: 144px;
+    left: 43%;
+
+    background: url("../img/icon-map-pin.svg") no-repeat 0 0;
+
+  }
 }
 
 .map__image {
@@ -12,6 +27,11 @@
   .map {
     width: 100%;
     margin-bottom: 55px;
+
+    &::before {
+      top: 138px;
+      left: 364px;
+    }
   }
 
   .map__image {
@@ -22,5 +42,10 @@
 @media (min-width: @desktop-width) {
   .map {
     width: 525px;
+
+    &::before {
+      top: 146px;
+      left: 240px;
+    }
   }
 }
