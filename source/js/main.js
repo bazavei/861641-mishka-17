@@ -1,4 +1,4 @@
-//Реализация выпадающего окна на мобильной версии сайта
+//Реализация выпадающего меню на мобильной версии сайта
 var navMain = document.querySelector('.main-nav');
 var navUser = document.querySelector('.user-nav');
 var navToogle = document.querySelector('.main-nav__toggle');
@@ -24,3 +24,29 @@ navToogle.addEventListener('click', function () {
     navToogle.classList.add('menu-toggle--closed');
   }
 });
+//Релизация модального окна
+var orderBtns = ducument.getElementsByClassName('modal-open-btn');
+var amountBtns = orderBtns.length;
+var orderModal = document.querySelector('.modal');
+var orderModalBtn = document.querySelector('.modal__button');
+
+var openModal = function () {
+  orderModal.classList.add('modal--opened');
+}
+
+var closeModal = function () {
+  orderModal.classList.remove('modal--opened');
+}
+
+if (orderModal) {
+  for (var i = 0; i < amountBtns; i++) {
+    orderBtns[i].addEventListener('cliclk', function (event) {
+      event.preventDefault();
+      openModal();
+  });
+
+  orderModalBtn.addEventListener('click', function (event) {
+    closeModal();
+    });
+  }
+}
