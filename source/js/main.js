@@ -25,22 +25,25 @@ navToogle.addEventListener('click', function () {
   }
 });
 //Релизация модального окна
-var orderBtns = ducument.getElementsByClassName('modal-open-btn');
+var orderBtns = document.getElementsByClassName('modal-open-btn');
 var amountBtns = orderBtns.length;
 var orderModal = document.querySelector('.modal');
 var orderModalBtn = document.querySelector('.modal__button');
+var overlay = document.querySelector('.page__overlay');
 
 var openModal = function () {
   orderModal.classList.add('modal--opened');
+  overlay.classList.add('page__overlay--opened');
 }
 
 var closeModal = function () {
   orderModal.classList.remove('modal--opened');
+  overlay.classList.remove('page__overlay--opened');
 }
 
 if (orderModal) {
   for (var i = 0; i < amountBtns; i++) {
-    orderBtns[i].addEventListener('cliclk', function (event) {
+    orderBtns[i].addEventListener('click', function (event) {
       event.preventDefault();
       openModal();
   });
@@ -49,4 +52,8 @@ if (orderModal) {
     closeModal();
     });
   }
+
+  overlay.addEventListener('click', function (event) {
+    closeModal();
+  });
 }
