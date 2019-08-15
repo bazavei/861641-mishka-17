@@ -66,6 +66,7 @@
 
   margin-right: 26px;
 }
+
 .product {
   &:hover .product__title,
   &:focus .product__title {
@@ -100,7 +101,7 @@
 
   .product__image {
     display: block;
-    width: 334px;
+    width: 100%;
     height: 332px;
   }
 
@@ -113,7 +114,7 @@
 
   .product__title {
     font-size: 20px;
-    padding-top: 6px;
+    padding-top: 5px;
   }
 
   .product__parameter {
@@ -124,7 +125,7 @@
   .product__price {
     height: 23px;
     font-size: 17px;
-    padding-left: 30px;
+    padding-left: 33px;
   }
 
   .product__link-to-cart {
@@ -142,8 +143,14 @@
     justify-content: space-between;
   }
 
+  .product__title {
+    padding-left: 25px;
+  }
+
   .product__parameter {
     margin-bottom: auto;
+    padding-top: 2px;
+    padding-left: 25px;
   }
 
   .product__price {
