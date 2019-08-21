@@ -181,6 +181,8 @@
 
 .filter__label {
   position: relative;
+  cursor: pointer;
+  outline: none;
 
   &--radio {
     &::before {
@@ -239,7 +241,7 @@
   border-color: @input-active;
 }
 
-.filter-form__annotation {
+.filter__annotation {
   font-family: @font-family;
   font-weight: normal;
   font-size: 14px;
@@ -273,7 +275,7 @@
   }
 }
 
-.filter-form__button {
+.filter__button {
   margin-top: 27px;
   margin-bottom: 56px;
 
@@ -306,6 +308,8 @@
 
         width: 54px;
         height: 52px;
+
+        background-size: 35px 25px;
       }
     }
   }
@@ -439,22 +443,23 @@
     margin: 0;
     margin-left: 25px;
     margin-top: -5px;
+    min-height: 43px;
 
     &--name {
       width: 428px;
     }
   }
 
-  .filter-form__button {
+  .filter__button {
     width: 230px;
     margin-top: 53px;
     margin-bottom: 50px;
     margin-left: 50px;
   }
 
-  .filter-form__annotation {
+  .filter__annotation {
     position: absolute;
-    bottom: 15px;
+    bottom: 20px;
     right: 50px;
 
     font-size: 17px;
@@ -525,13 +530,13 @@
     letter-spacing: 1.2px;
   }
 
-  .filter-form__button {
+  .filter__button {
     margin-top: 49px;
     margin-left: 225px;
   }
 
-  .filter-form__annotation {
-    bottom: 12px;
+  .filter__annotation {
+    bottom: 19px;
     right: 224px;
   }
 

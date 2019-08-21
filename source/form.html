@@ -19,37 +19,37 @@
     </div>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a href="index.html" class="page-header__logo">
+        <a class="page-header__logo" href="index.html">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="логотип магазина «Мишка»" width="86" height="35">
           </picture>
         </a>
-        <button class="main-nav__toggle menu-toggle menu-toggle--closed menu-toggle--nojs" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+        <button class="menu-toggle menu-toggle--closed menu-toggle--nojs" type="button">
+          <span class="visually-hidden">Открыть меню</span>
         </button>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a class="main-nav__link site__link" href="catalog.html">Каталог товаров</a>
+              <a class="main-nav__link site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a class="main-nav__link site__link" href="form.html">Вязание на заказ</a>
+              <a class="main-nav__link site-list__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
         </nav>
         <nav class="user-nav user-nav--closed user-nav--nojs">
-          <ul class="main-nav__list user-list">
+          <ul class="user-list">
             <li class="user-list__item">
-              <a class="main-nav__link user-list__search" href="#">
+              <a class="user-list__link user-list__search" href="#">
                 <svg class="user-list__icon user-list__icon--searh" width="18" height="18">
                   <use xlink:href="#icon-search"></use>
                 </svg>
                 Поиск по сайту</a>
             </li>
             <li class="user-list__item">
-              <a class="main-nav__link user-list__cart" href="#">
+              <a class="user-list__link user-list__cart" href="#">
                 <svg class="user-list__icon user-list__icon--cart" width="21" height="18">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -58,14 +58,14 @@
           </ul>
         </nav>
         <div class="page-header__special-offers special-offers">
-        <ul class="special-offers__list">
-          <li class="special-offers__item">
-            <a class="special-offers__link" href="#">Новые поступления</a>
-          </li>
-          <li class="special-offers__item">
-            <a class="special-offers__link" href="#">Распродажа</a>
-          </li>
-        </ul>
+          <ul class="special-offers__list">
+            <li class="special-offers__item">
+              <a class="special-offers__link" href="#">Новые поступления</a>
+            </li>
+            <li class="special-offers__item">
+              <a class="special-offers__link" href="#">Распродажа</a>
+            </li>
+          </ul>
         </div>
         <p class="page-header__delivery">Бесплатная доставка по России</p>
       </div>
@@ -80,12 +80,12 @@
           <label class="filter__title">Тип</label>
           <ul class="filter__list filter__list--radio">
             <li class="filter__option">
-              <input class="filter__input input-radio" type="radio" name="radio-option" value="Accessory" id="Accessory" checked="">
-              <label class="filter__label filter__label--radio" for="Accessory">Аксессуар для интерьера</label>
+              <input class="filter__input input-radio" type="radio" name="radio-option" value="Accessory" id="Accessory" checked>
+              <label class="filter__label filter__label--radio" for="Accessory" tabindex="0">Аксессуар для интерьера</label>
             </li>
             <li class="filter__option">
               <input class="filter__input input-radio" type="radio" name="radio-option" value="toy" id="toy">
-              <label class="filter__label filter__label--radio" for="toy">Детская игрушка</label>
+              <label class="filter__label filter__label--radio" for="toy" tabindex="0">Детская игрушка</label>
             </li>
           </ul>
         </div>
@@ -93,27 +93,27 @@
           <label class="filter__title">Цвет</label>
           <ul class="filter__list filter__list--checkbox">
             <li class="filter__option">
-              <input class="filter__input input-checkbox" type="checkbox" name="white" id="white" checked="">
-              <label class="filter__label filter__label--checkbox" for="white">Белый</label></li>
+              <input class="filter__input input-checkbox" type="checkbox" name="white" id="white" checked>
+              <label class="filter__label filter__label--checkbox" for="white" tabindex="0">Белый</label></li>
             <li class="filter__option">
-              <input class="filter__input input-checkbox" type="checkbox" name="gray" id="gray" checked="">
-              <label class="filter__label filter__label--checkbox" for="gray">Серый</label>
+              <input class="filter__input input-checkbox" type="checkbox" name="gray" id="gray" checked>
+              <label class="filter__label filter__label--checkbox" for="gray" tabindex="0">Серый</label>
             </li>
             <li class="filter__option">
               <input class="filter__input input-checkbox" type="checkbox" name="tiffany" id="tiffany">
-              <label class="filter__label filter__label--checkbox" for="tiffany">«Тиффани»</label>
+              <label class="filter__label filter__label--checkbox" for="tiffany" tabindex="0">«Тиффани»</label>
             </li>
             <li class="filter__option">
               <input class="filter__input input-checkbox" type="checkbox" name="black" id="black">
-              <label class="filter__label filter__label--checkbox" for="black">Черный</label>
+              <label class="filter__label filter__label--checkbox" for="black" tabindex="0">Черный</label>
             </li>
             <li class="filter__option">
               <input class="filter__input input-checkbox" type="checkbox" name="pink" id="pink">
-              <label class="filter__label filter__label--checkbox" for="pink">Розовый</label>
+              <label class="filter__label filter__label--checkbox" for="pink" tabindex="0">Розовый</label>
             </li>
             <li class="filter__option">
               <input class="filter__input input-checkbox" type="checkbox" name="orange" id="orange">
-              <label class="filter__label filter__label--checkbox" for="orange">Оранжевый</label>
+              <label class="filter__label filter__label--checkbox" for="orange" tabindex="0">Оранжевый</label>
             </li>
           </ul>
         </div>
@@ -152,8 +152,8 @@
           <label class="filter__title">Доп</label>
           <textarea class="filter__input input-type-textarea" name="text" id="text" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </div>
-        <span class="filter-form__annotation"><sub>*</sub>Поля обязательны для заполнения</span>
-        <button class="button filter-form__button" type="submit">Отправить заказ</button>
+        <span class="filter__annotation"><sub>*</sub>Поля обязательны для заполнения</span>
+        <button class="button filter__button" type="submit">Отправить заказ</button>
       </form>
     </main>
     <footer class="page-footer">

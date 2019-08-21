@@ -6,7 +6,6 @@ body {
   line-height: 27px;
   font-family: @font-family;
   background-color: @bg-header;
-  // background: @bg-header url("../img/m-i-m.png") no-repeat 50% 0;
   background-size: 720px auto;
   min-height: 750px;
 }
@@ -20,18 +19,49 @@ svg path {
   fill: inherit;
 }
 
+.menu-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: @main-text-color;
+
+  font-family: @font-family;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+
+  padding-top: 26px;
+  padding-left: 75px;
+  padding-bottom: 28px;
+
+  &:hover,
+  &:focus {
+    color: #666666;
+  }
+
+  &:active {
+    color: lighten(@main-text-color, 70%);
+  }
+
+  &:hover .user-list__icon,
+  &:focus .user-list__icon {
+    fill: #63d1bb;
+    opacity: 1;
+  }
+
+  &:active .user-list__icon {
+    opacity: 0.4;
+  }
+}
+
 @media (min-width: @tablet-width) {
   body {
     width: 768px;
-    // background: @bg-header url("../img/m-i-t.png") no-repeat 50% 0;
-    background-size: 1178px auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   body {
     width: 1150px;
-    // background: @bg-header url("../img/m-i-d.png") no-repeat 50% 0;
-    background-size: 1391px auto;
   }
 }

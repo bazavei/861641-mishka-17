@@ -39,7 +39,7 @@
   color: @second-text-color;
 }
 
-.hit__parameter {
+.hit__parameter-list {
   width: 230px;
 
   font-family: @font-family;
@@ -47,6 +47,16 @@
   font-size: 14px;
   line-height: 20px;
   color: @second-text-color;
+  border-collapse: collapse;
+
+  tr {
+    height: 40px;
+    border-bottom: 1px solid @border-color;
+  }
+}
+
+.hit__parameter-field {
+  padding-right: 27px;
 }
 
 .hit__price {
@@ -109,9 +119,13 @@
     letter-spacing: 0;
   }
 
-  .hit__parameter {
-    margin-top: 35px;
+  .hit__parameter-list {
+    margin-top: 50px;
     width: 290px;
+  }
+
+  .hit__parameter-field {
+    padding-right: 0;
   }
 
   .hit__image {

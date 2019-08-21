@@ -1,7 +1,7 @@
 //Реализация выпадающего меню на мобильной версии сайта
 var navMain = document.querySelector('.main-nav');
 var navUser = document.querySelector('.user-nav');
-var navToogle = document.querySelector('.main-nav__toggle');
+var navToogle = document.querySelector('.menu-toggle');
 
 navMain.classList.remove('main-nav--nojs');
 navUser.classList.remove('user-nav--nojs');
